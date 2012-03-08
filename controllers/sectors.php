@@ -78,8 +78,12 @@ class Sectors_Controller extends Main_Controller {
 
 		// Check, has the form been submitted, if so, setup validation
 		if ($_POST)
-		{
-			// Instantiate Validation, use $post, so we don't overwrite $_POST fields with our own things
+    {
+      // TODO: If the user is logged and in an admin role then their sector 
+      // should be approved
+      
+      // Instantiate Validation, use $post, so we don't overwrite $_POST fields
+      // with our own things
 			$post = array_merge($_POST, $_FILES);
 
 			// Test to see if things passed the rule checks
@@ -91,7 +95,6 @@ class Sectors_Controller extends Main_Controller {
 			// No! We have validation errors, we need to show the form again, with the errors
 			else
 			{
-        Kohana::log('info', 'Did not succeed: $post->as_array() => '. print_r($post->as_array(), 1));
 				// Repopulate the form fields
         $form = arr::overwrite($form, $post->as_array());
 

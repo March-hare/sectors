@@ -36,6 +36,7 @@ class Sectors_Install {
         `geometry_comment` varchar(255) DEFAULT NULL,
         `geometry_color` varchar(20) DEFAULT NULL,
         `geometry_strokewidth` varchar(5) DEFAULT NULL,
+        `approved` tinyint(1) NOT NULL DEFAULT '0',
         PRIMARY KEY (`id`),
         SPATIAL KEY `geometry` (`geometry`)
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 "
