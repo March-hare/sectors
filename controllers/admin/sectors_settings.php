@@ -10,7 +10,7 @@
  * @license	   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
 
-class Sectors_Controller extends Admin_Controller {
+class Sectors_Settings_Controller extends Admin_Controller {
 	public function __construct()
 	{
     parent::__construct();
