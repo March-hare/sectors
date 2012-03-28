@@ -125,6 +125,7 @@ class Sectors_Controller extends Main_Controller {
 
 		// Rebuild Header Block
 		$this->template->header->header_block = $this->themes->header_block();
+		$this->template->footer->footer_block = $this->themes->footer_block();
 	}
 
 	 /**
